@@ -166,56 +166,229 @@
   },
   "test_files": [
     {
+      "recording": "Jumping5",
+      "source": "second phone (SM-A235F), single-activity",
+      "device": "SM-A235F",
+      "configured_hz": 100.0,
+      "detected_hz": 102.07,
+      "raw_duration_s": 10.01
+    },
+    {
+      "recording": "Standing13",
+      "source": "second phone (SM-A235F), single-activity",
+      "device": "SM-A235F",
+      "configured_hz": 100.0,
+      "detected_hz": 102.07,
+      "raw_duration_s": 10.31
+    },
+    {
+      "recording": "Still20",
+      "source": "second phone (SM-A235F), single-activity",
+      "device": "SM-A235F",
+      "configured_hz": 100.0,
+      "detected_hz": 102.07,
+      "raw_duration_s": 10.29
+    },
+    {
+      "recording": "Walking16",
+      "source": "second phone (SM-A235F), single-activity",
+      "device": "SM-A235F",
+      "configured_hz": 100.0,
+      "detected_hz": 102.07,
+      "raw_duration_s": 10.0
+    },
+    {
       "recording": "standing_walking_jumping_still_01",
+      "source": "same phone (iPhone XS), sequences",
+      "device": "iPhone XS",
+      "configured_hz": 50.0,
       "detected_hz": 49.77,
       "raw_duration_s": 45.33
     },
     {
       "recording": "standing_walking_jumping_still_02",
+      "source": "same phone (iPhone XS), sequences",
+      "device": "iPhone XS",
+      "configured_hz": 50.0,
       "detected_hz": 49.77,
       "raw_duration_s": 31.58
     },
     {
       "recording": "still_jumping_walking_standing_01",
+      "source": "same phone (iPhone XS), sequences",
+      "device": "iPhone XS",
+      "configured_hz": 50.0,
       "detected_hz": 49.77,
       "raw_duration_s": 35.36
     }
   ],
+  "test_by_source": {
+    "same phone (iPhone XS), sequences": {
+      "table": [
+        {
+          "State (Activity)": "standing",
+          "Number of Samples": 18,
+          "Sensitivity": 0.8889,
+          "Specificity": 0.9143,
+          "Overall Accuracy": 0.9091
+        },
+        {
+          "State (Activity)": "walking",
+          "Number of Samples": 29,
+          "Sensitivity": 1.0,
+          "Specificity": 0.9322,
+          "Overall Accuracy": 0.9545
+        },
+        {
+          "State (Activity)": "jumping",
+          "Number of Samples": 27,
+          "Sensitivity": 0.9259,
+          "Specificity": 1.0,
+          "Overall Accuracy": 0.9773
+        },
+        {
+          "State (Activity)": "still",
+          "Number of Samples": 14,
+          "Sensitivity": 0.5714,
+          "Specificity": 1.0,
+          "Overall Accuracy": 0.9318
+        },
+        {
+          "State (Activity)": "All (multi-class)",
+          "Number of Samples": 88,
+          "Sensitivity": 0.8466,
+          "Specificity": 0.9616,
+          "Overall Accuracy": 0.8864
+        }
+      ],
+      "cm": [
+        [
+          16,
+          2,
+          0,
+          0
+        ],
+        [
+          0,
+          29,
+          0,
+          0
+        ],
+        [
+          0,
+          2,
+          25,
+          0
+        ],
+        [
+          6,
+          0,
+          0,
+          8
+        ]
+      ]
+    },
+    "second phone (SM-A235F), single-activity": {
+      "table": [
+        {
+          "State (Activity)": "standing",
+          "Number of Samples": 5,
+          "Sensitivity": 1.0,
+          "Specificity": 1.0,
+          "Overall Accuracy": 1.0
+        },
+        {
+          "State (Activity)": "walking",
+          "Number of Samples": 5,
+          "Sensitivity": 1.0,
+          "Specificity": 1.0,
+          "Overall Accuracy": 1.0
+        },
+        {
+          "State (Activity)": "jumping",
+          "Number of Samples": 5,
+          "Sensitivity": 1.0,
+          "Specificity": 1.0,
+          "Overall Accuracy": 1.0
+        },
+        {
+          "State (Activity)": "still",
+          "Number of Samples": 5,
+          "Sensitivity": 1.0,
+          "Specificity": 1.0,
+          "Overall Accuracy": 1.0
+        },
+        {
+          "State (Activity)": "All (multi-class)",
+          "Number of Samples": 20,
+          "Sensitivity": 1.0,
+          "Specificity": 1.0,
+          "Overall Accuracy": 1.0
+        }
+      ],
+      "cm": [
+        [
+          5,
+          0,
+          0,
+          0
+        ],
+        [
+          0,
+          5,
+          0,
+          0
+        ],
+        [
+          0,
+          0,
+          5,
+          0
+        ],
+        [
+          0,
+          0,
+          0,
+          5
+        ]
+      ]
+    }
+  },
   "test_table": [
     {
       "State (Activity)": "standing",
-      "Number of Samples": 18,
-      "Sensitivity": 0.8889,
-      "Specificity": 0.9143,
-      "Overall Accuracy": 0.9091
+      "Number of Samples": 23,
+      "Sensitivity": 0.913,
+      "Specificity": 0.9294,
+      "Overall Accuracy": 0.9259
     },
     {
       "State (Activity)": "walking",
-      "Number of Samples": 29,
+      "Number of Samples": 34,
       "Sensitivity": 1.0,
-      "Specificity": 0.9322,
-      "Overall Accuracy": 0.9545
+      "Specificity": 0.9459,
+      "Overall Accuracy": 0.963
     },
     {
       "State (Activity)": "jumping",
-      "Number of Samples": 27,
-      "Sensitivity": 0.9259,
+      "Number of Samples": 32,
+      "Sensitivity": 0.9375,
       "Specificity": 1.0,
-      "Overall Accuracy": 0.9773
+      "Overall Accuracy": 0.9815
     },
     {
       "State (Activity)": "still",
-      "Number of Samples": 14,
-      "Sensitivity": 0.5714,
+      "Number of Samples": 19,
+      "Sensitivity": 0.6842,
       "Specificity": 1.0,
-      "Overall Accuracy": 0.9318
+      "Overall Accuracy": 0.9444
     },
     {
       "State (Activity)": "All (multi-class)",
-      "Number of Samples": 88,
-      "Sensitivity": 0.8466,
-      "Specificity": 0.9616,
-      "Overall Accuracy": 0.8864
+      "Number of Samples": 108,
+      "Sensitivity": 0.8837,
+      "Specificity": 0.9688,
+      "Overall Accuracy": 0.9074
     }
   ],
   "train_table": [
@@ -257,28 +430,28 @@
   ],
   "cm_test": [
     [
-      16,
+      21,
       2,
       0,
       0
     ],
     [
       0,
-      29,
+      34,
       0,
       0
     ],
     [
       0,
       2,
-      25,
+      30,
       0
     ],
     [
       6,
       0,
       0,
-      8
+      13
     ]
   ],
   "cm_train": [
@@ -309,13 +482,19 @@
   ],
   "test_excluded_transition_windows": 8,
   "per_file_acc": {
+    "Jumping5": 1.0,
+    "Standing13": 1.0,
+    "Still20": 1.0,
+    "Walking16": 1.0,
     "standing_walking_jumping_still_01": 0.9189,
     "standing_walking_jumping_still_02": 0.8261,
     "still_jumping_walking_standing_01": 0.8929
   },
   "errors": {
     "n": 10,
+    "n_seq": 10,
     "near_boundary": 9,
+    "n_second_phone": 0,
     "pairs": [
       {
         "label": "jumping",
@@ -334,9 +513,76 @@
       }
     ]
   },
+  "domain_shift": {
+    "train (iPhone XS)|acc_rms": {
+      "standing": -0.75,
+      "walking": 0.16,
+      "jumping": 1.19,
+      "still": -1.23
+    },
+    "train (iPhone XS)|gyro_rms": {
+      "standing": -1.11,
+      "walking": -0.07,
+      "jumping": 0.26,
+      "still": -2.63
+    },
+    "train (iPhone XS)|acc_dom_freq": {
+      "standing": 2.26,
+      "walking": 2.08,
+      "jumping": 3.73,
+      "still": 6.92
+    },
+    "train (iPhone XS)|acc_spec_entropy": {
+      "standing": 0.72,
+      "walking": 0.65,
+      "jumping": 0.58,
+      "still": 0.84
+    },
+    "second phone|acc_rms": {
+      "standing": -0.59,
+      "walking": 0.24,
+      "jumping": 1.34,
+      "still": -1.8
+    },
+    "second phone|gyro_rms": {
+      "standing": -0.99,
+      "walking": -0.24,
+      "jumping": 0.61,
+      "still": -2.61
+    },
+    "second phone|acc_dom_freq": {
+      "standing": 2.4,
+      "walking": 1.5,
+      "jumping": 3.7,
+      "still": 6.3
+    },
+    "second phone|acc_spec_entropy": {
+      "standing": 0.84,
+      "walking": 0.66,
+      "jumping": 0.57,
+      "still": 0.84
+    }
+  },
   "ablation": {
-    "HMM, supervised init + Baum-Welch (final)": 0.8864,
-    "HMM, supervised init only": 0.9205,
-    "Frame-wise Gaussian (no transitions)": 0.8864
+    "HMM, supervised init + Baum-Welch (final)": 0.9074,
+    "HMM, supervised init only": 0.9352,
+    "Frame-wise Gaussian (no transitions)": 0.9074
+  },
+  "ablation_by_source": {
+    "HMM, supervised init + Baum-Welch (final)": {
+      "all unseen": 0.9074,
+      "same phone (iPhone XS), sequences": 0.8864,
+      "second phone (SM-A235F), single-activity": 1.0
+    },
+    "HMM, supervised init only": {
+      "all unseen": 0.9352,
+      "same phone (iPhone XS), sequences": 0.9205,
+      "second phone (SM-A235F), single-activity": 1.0
+    },
+    "Frame-wise Gaussian (no transitions)": {
+      "all unseen": 0.9074,
+      "same phone (iPhone XS), sequences": 0.8864,
+      "second phone (SM-A235F), single-activity": 1.0
+    }
   }
 }
