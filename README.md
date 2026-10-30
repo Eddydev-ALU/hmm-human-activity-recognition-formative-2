@@ -9,6 +9,7 @@ Formative 2: human activity recognition from smartphone accelerometer and gyrosc
 | Member | Phone | App | Configured rate | Detected rate (timestamps) | Harmonised to |
 |---|---|---|---|---|---|
 | [TODO: member name] | iPhone XS (iOS 18.7.5) | Sensor Logger 1.68 | 50 Hz (`sampleRateMs = 20`) | 49.76–49.77 Hz | 50 Hz (linear interpolation) |
+| [TODO: friend's name] (unseen test data only) | Samsung SM-A235F (Android) | Sensor Logger 1.68 | 100 Hz (`sampleRateMs = 10`) | 102.07 Hz | 50 Hz (20 Hz anti-aliasing low-pass, then linear interpolation) |
 
 ## Data collection videos (one per activity)
 
@@ -21,13 +22,20 @@ Formative 2: human activity recognition from smartphone accelerometer and gyrosc
 
 ## Results (unseen test data)
 
+Unseen data comes from two sources: (a) 3 new multi-activity sequences recorded on the training phone in a later session, and (b) 4 single-activity files from a second person on a different phone (Samsung, 100 Hz).
+
 | State (Activity) | Number of Samples (windows) | Sensitivity | Specificity | Overall Accuracy |
 |---|---|---|---|---|
-| Standing | 18 | 0.889 | 0.914 | 0.909 |
-| Walking | 29 | 1.000 | 0.932 | 0.955 |
-| Jumping | 27 | 0.926 | 1.000 | 0.977 |
-| Still | 14 | 0.571 | 1.000 | 0.932 |
-| **All (multi-class)** | **88** | 0.847 (macro) | 0.962 (macro) | **0.886** |
+| Standing | 23 | 0.913 | 0.929 | 0.926 |
+| Walking | 34 | 1.000 | 0.946 | 0.963 |
+| Jumping | 32 | 0.938 | 1.000 | 0.982 |
+| Still | 19 | 0.684 | 1.000 | 0.944 |
+| **All (multi-class)** | **108** | 0.884 (macro) | 0.969 (macro) | **0.907** |
+
+| Unseen source | Windows | Accuracy |
+|---|---|---|
+| same phone (iPhone XS), sequences | 88 | 0.886 |
+| second phone (SM-A235F), single-activity | 20 | 1.000 |
 
 Training-set accuracy is 0.985. Baum-Welch converged in 6 iterations. See `report/report.docx` for the full analysis.
 
@@ -36,7 +44,8 @@ Training-set accuracy is 0.985. Baum-Welch converged in 6 iterations. See `repor
 ```
 data/
   raw/train/<label>_<NN>-<timestamp>/   48 Sensor Logger exports (12 per activity, about 13.6 s each)
-  raw/test/<sequence>-<timestamp>/      3 unseen multi-activity recordings (never used for training)
+  raw/test/<sequence>-<timestamp>/      3 unseen multi-activity recordings, training phone (never used for training)
+  raw/test/<Label><NN>-<timestamp>/     4 unseen single-activity recordings, second phone (Samsung SM-A235F, 100 Hz)
   labels/test_segments.csv              hand-labelled activity boundaries of the test recordings (seconds from recording start)
   processed/
     train/<label>_<NN>.csv              cleaned recordings: merged acc+gyro, 50 Hz, 2 s trimmed each end, labelled
@@ -64,7 +73,7 @@ jupyter nbconvert --to notebook --execute --inplace notebooks/hmm_activity_recog
 
 ## Method summary
 
-- **Pre-processing:** merge accelerometer and gyroscope on timestamp, drop NaNs, resample to a uniform 50 Hz grid, trim 2 s at each end.
+- **Pre-processing:** merge accelerometer and gyroscope on the nearest timestamp, drop NaNs, resample to a uniform 50 Hz grid (with an anti-aliasing low-pass filter for faster phones), trim 2 s at each end.
 - **Windowing:** 2 s windows (`int(2.0 * FS)` = 100 samples) with 50 % overlap, built within each recording only.
 - **Features (17):** 12 time-domain (log RMS, per-axis log std, log SMA, axis correlations) and 5 frequency-domain (dominant frequency, spectral energy, spectral entropy), followed by Z-score normalisation fitted on train only.
 - **HMM:** 4 hidden states, diagonal-Gaussian emissions with a variance floor, log-space forward/backward, Viterbi, and multi-sequence Baum-Welch (stops when the log-likelihood gain is below 1e-4). It is initialised from labelled windows. States are mapped to labels with the Hungarian algorithm.
