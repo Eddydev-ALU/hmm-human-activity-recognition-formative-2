@@ -1,0 +1,2 @@
+version,device name,recording epoch time,recording time,recording timezone,platform,appVersion,device id,sensors,sampleRateMs,standardisation,platform version
+3,iPhone XS,1793355183963,2026-10-30_10-13-03,Africa/Kigali,ios,1.68,a1a5646d-8df3-43af-8100-60ccf65bbc9a,Accelerometer|Gyroscope|Annotation|GyroscopeUncalibrated|AccelerometerUncalibrated,20|20||20|20,false,18.7.5
