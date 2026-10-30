@@ -1,0 +1,342 @@
+{
+  "devices": [
+    {
+      "device": "iPhone XS",
+      "files": 48,
+      "configured_hz": 50.0,
+      "detected_hz_mean": 49.77,
+      "detected_hz_min": 49.76,
+      "detected_hz_max": 49.77
+    }
+  ],
+  "detected_hz_range": [
+    49.76,
+    49.77
+  ],
+  "train_summary": [
+    {
+      "label": "standing",
+      "files": 12,
+      "raw_seconds": 165.6,
+      "clean_seconds": 117.8,
+      "mean_clean_s": 9.8
+    },
+    {
+      "label": "walking",
+      "files": 12,
+      "raw_seconds": 163.7,
+      "clean_seconds": 115.9,
+      "mean_clean_s": 9.7
+    },
+    {
+      "label": "jumping",
+      "files": 12,
+      "raw_seconds": 163.4,
+      "clean_seconds": 115.6,
+      "mean_clean_s": 9.6
+    },
+    {
+      "label": "still",
+      "files": 12,
+      "raw_seconds": 162.2,
+      "clean_seconds": 114.4,
+      "mean_clean_s": 9.5
+    },
+    {
+      "label": "TOTAL",
+      "files": 48,
+      "raw_seconds": 654.8999999999999,
+      "clean_seconds": 463.69999999999993,
+      "mean_clean_s": 9.7
+    }
+  ],
+  "n_train_files": 48,
+  "clean_duration_range": [
+    8.66,
+    12.54
+  ],
+  "features": {
+    "time": [
+      "acc_rms",
+      "acc_std_x",
+      "acc_std_y",
+      "acc_std_z",
+      "acc_sma",
+      "acc_corr_xy",
+      "acc_corr_xz",
+      "acc_corr_yz",
+      "gyro_rms",
+      "gyro_std_x",
+      "gyro_std_y",
+      "gyro_std_z"
+    ],
+    "freq": [
+      "acc_dom_freq",
+      "acc_spec_entropy",
+      "acc_spec_energy",
+      "gyro_dom_freq",
+      "gyro_spec_entropy"
+    ]
+  },
+  "train_windows": {
+    "standing": 100,
+    "walking": 98,
+    "jumping": 98,
+    "still": 96
+  },
+  "fisher_top": {
+    "acc_sma": 84.22,
+    "acc_rms": 77.3,
+    "acc_std_x": 53.15,
+    "acc_spec_energy": 51.96,
+    "gyro_std_z": 50.37
+  },
+  "bw": {
+    "iterations": 6,
+    "converged": true,
+    "ll_init": 639.71,
+    "ll_final": 786.9,
+    "tol": 0.0001,
+    "max_iter": 200,
+    "var_floor": 0.01
+  },
+  "state_map": {
+    "0": "standing",
+    "1": "walking",
+    "2": "jumping",
+    "3": "still"
+  },
+  "A": {
+    "standing": {
+      "standing": 0.874,
+      "walking": 0.054,
+      "jumping": 0.01,
+      "still": 0.046
+    },
+    "walking": {
+      "standing": 0.049,
+      "walking": 0.925,
+      "jumping": 0.031,
+      "still": 0.011
+    },
+    "jumping": {
+      "standing": 0.039,
+      "walking": 0.011,
+      "jumping": 0.887,
+      "still": 0.057
+    },
+    "still": {
+      "standing": 0.039,
+      "walking": 0.011,
+      "jumping": 0.072,
+      "still": 0.885
+    }
+  },
+  "A_init": {
+    "standing": {
+      "standing": 0.864,
+      "walking": 0.062,
+      "jumping": 0.02,
+      "still": 0.031
+    },
+    "walking": {
+      "standing": 0.049,
+      "walking": 0.906,
+      "jumping": 0.04,
+      "still": 0.021
+    },
+    "jumping": {
+      "standing": 0.058,
+      "walking": 0.01,
+      "jumping": 0.861,
+      "still": 0.062
+    },
+    "still": {
+      "standing": 0.029,
+      "walking": 0.021,
+      "jumping": 0.079,
+      "still": 0.885
+    }
+  },
+  "pi": {
+    "standing": 0.333,
+    "walking": 0.333,
+    "jumping": 0.167,
+    "still": 0.167
+  },
+  "test_files": [
+    {
+      "recording": "standing_walking_jumping_still_01",
+      "detected_hz": 49.77,
+      "raw_duration_s": 45.33
+    },
+    {
+      "recording": "standing_walking_jumping_still_02",
+      "detected_hz": 49.77,
+      "raw_duration_s": 31.58
+    },
+    {
+      "recording": "still_jumping_walking_standing_01",
+      "detected_hz": 49.77,
+      "raw_duration_s": 35.36
+    }
+  ],
+  "test_table": [
+    {
+      "State (Activity)": "standing",
+      "Number of Samples": 18,
+      "Sensitivity": 0.8889,
+      "Specificity": 0.9143,
+      "Overall Accuracy": 0.9091
+    },
+    {
+      "State (Activity)": "walking",
+      "Number of Samples": 29,
+      "Sensitivity": 1.0,
+      "Specificity": 0.9322,
+      "Overall Accuracy": 0.9545
+    },
+    {
+      "State (Activity)": "jumping",
+      "Number of Samples": 27,
+      "Sensitivity": 0.9259,
+      "Specificity": 1.0,
+      "Overall Accuracy": 0.9773
+    },
+    {
+      "State (Activity)": "still",
+      "Number of Samples": 14,
+      "Sensitivity": 0.5714,
+      "Specificity": 1.0,
+      "Overall Accuracy": 0.9318
+    },
+    {
+      "State (Activity)": "All (multi-class)",
+      "Number of Samples": 88,
+      "Sensitivity": 0.8466,
+      "Specificity": 0.9616,
+      "Overall Accuracy": 0.8864
+    }
+  ],
+  "train_table": [
+    {
+      "State (Activity)": "standing",
+      "Number of Samples": 100,
+      "Sensitivity": 0.99,
+      "Specificity": 0.9829,
+      "Overall Accuracy": 0.9847
+    },
+    {
+      "State (Activity)": "walking",
+      "Number of Samples": 98,
+      "Sensitivity": 1.0,
+      "Specificity": 0.9966,
+      "Overall Accuracy": 0.9974
+    },
+    {
+      "State (Activity)": "jumping",
+      "Number of Samples": 98,
+      "Sensitivity": 1.0,
+      "Specificity": 1.0,
+      "Overall Accuracy": 1.0
+    },
+    {
+      "State (Activity)": "still",
+      "Number of Samples": 96,
+      "Sensitivity": 0.9479,
+      "Specificity": 1.0,
+      "Overall Accuracy": 0.9872
+    },
+    {
+      "State (Activity)": "All (multi-class)",
+      "Number of Samples": 392,
+      "Sensitivity": 0.9845,
+      "Specificity": 0.9949,
+      "Overall Accuracy": 0.9847
+    }
+  ],
+  "cm_test": [
+    [
+      16,
+      2,
+      0,
+      0
+    ],
+    [
+      0,
+      29,
+      0,
+      0
+    ],
+    [
+      0,
+      2,
+      25,
+      0
+    ],
+    [
+      6,
+      0,
+      0,
+      8
+    ]
+  ],
+  "cm_train": [
+    [
+      99,
+      1,
+      0,
+      0
+    ],
+    [
+      0,
+      98,
+      0,
+      0
+    ],
+    [
+      0,
+      0,
+      98,
+      0
+    ],
+    [
+      5,
+      0,
+      0,
+      91
+    ]
+  ],
+  "test_excluded_transition_windows": 8,
+  "per_file_acc": {
+    "standing_walking_jumping_still_01": 0.9189,
+    "standing_walking_jumping_still_02": 0.8261,
+    "still_jumping_walking_standing_01": 0.8929
+  },
+  "errors": {
+    "n": 10,
+    "near_boundary": 9,
+    "pairs": [
+      {
+        "label": "jumping",
+        "pred": "walking",
+        "n": 2
+      },
+      {
+        "label": "standing",
+        "pred": "walking",
+        "n": 2
+      },
+      {
+        "label": "still",
+        "pred": "standing",
+        "n": 6
+      }
+    ]
+  },
+  "ablation": {
+    "HMM, supervised init + Baum-Welch (final)": 0.8864,
+    "HMM, supervised init only": 0.9205,
+    "Frame-wise Gaussian (no transitions)": 0.8864
+  }
+}
