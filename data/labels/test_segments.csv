@@ -1,0 +1,16 @@
+recording,start_s,end_s,label
+standing_walking_jumping_still_01,2.0,8.0,standing
+standing_walking_jumping_still_01,8.0,21.5,walking
+standing_walking_jumping_still_01,21.5,33.0,jumping
+standing_walking_jumping_still_01,33.0,37.0,transition
+standing_walking_jumping_still_01,37.0,99.0,still
+standing_walking_jumping_still_02,2.0,8.0,standing
+standing_walking_jumping_still_02,8.0,15.5,walking
+standing_walking_jumping_still_02,15.5,23.0,jumping
+standing_walking_jumping_still_02,23.0,26.5,transition
+standing_walking_jumping_still_02,26.5,99.0,still
+still_jumping_walking_standing_01,0.0,8.5,still
+still_jumping_walking_standing_01,8.5,10.3,transition
+still_jumping_walking_standing_01,10.3,17.0,jumping
+still_jumping_walking_standing_01,17.0,27.0,walking
+still_jumping_walking_standing_01,27.0,99.0,standing
