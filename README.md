@@ -15,10 +15,10 @@ Formative 2: human activity recognition from smartphone accelerometer and gyrosc
 
 | Activity | Video |
 |---|---|
-| Standing | [TODO: video link] |
-| Walking | [TODO: video link] |
-| Jumping | [TODO: video link] |
-| Still | [TODO: video link] |
+| Standing | https://drive.google.com/file/d/1f4_p_-ujCiJZu97DpZ5USixrpc7iwrEp/view?usp=sharing |
+| Walking | https://drive.google.com/file/d/1jgML2SbKMkt49ShfATg1yWFIp1IBQ9B9/view?usp=sharing |
+| Jumping | https://drive.google.com/file/d/1U_uXRKpqcJjFT1HDZSg_uy9OPgarakPx/view?usp=sharing |
+| Still | https://drive.google.com/file/d/1k5gLUf_np0WNJqVYsKyLhyXlgU_nX-zk/view?usp=sharing |
 
 ## Results (unseen test data)
 
@@ -26,24 +26,24 @@ Unseen data comes from two sources: (a) 3 new multi-activity sequences recorded 
 
 | State (Activity) | Number of Samples (windows) | Sensitivity | Specificity | Overall Accuracy |
 |---|---|---|---|---|
-| Standing | 23 | 0.913 | 0.929 | 0.926 |
-| Walking | 34 | 1.000 | 0.946 | 0.963 |
+| Standing | 23 | 0.870 | 0.929 | 0.917 |
+| Walking | 34 | 1.000 | 0.932 | 0.954 |
 | Jumping | 32 | 0.938 | 1.000 | 0.982 |
 | Still | 19 | 0.684 | 1.000 | 0.944 |
-| **All (multi-class)** | **108** | 0.884 (macro) | 0.969 (macro) | **0.907** |
+| **All (multi-class)** | **108** | 0.873 (macro) | 0.966 (macro) | **0.898** |
 
 | Unseen source | Windows | Accuracy |
 |---|---|---|
-| same phone (iPhone XS), sequences | 88 | 0.886 |
+| same phone (iPhone XS), sequences | 88 | 0.875 |
 | second phone (SM-A235F), single-activity | 20 | 1.000 |
 
-Training-set accuracy is 0.985. Baum-Welch converged in 6 iterations. See `report/report.docx` for the full analysis.
+Training-set accuracy is 0.984. Baum-Welch converged in 6 iterations. See `report/report.docx` for the full analysis.
 
 ## Repository structure
 
 ```
 data/
-  raw/train/<label>_<NN>-<timestamp>/   48 Sensor Logger exports (12 per activity, about 13.6 s each)
+  raw/train/<label>_<NN>-<timestamp>/   52 Sensor Logger exports (13 per activity, about 13.6 s each)
   raw/test/<sequence>-<timestamp>/      3 unseen multi-activity recordings, training phone (never used for training)
   raw/test/<Label><NN>-<timestamp>/     4 unseen single-activity recordings, second phone (Samsung SM-A235F, 100 Hz)
   labels/test_segments.csv              hand-labelled activity boundaries of the test recordings (seconds from recording start)
