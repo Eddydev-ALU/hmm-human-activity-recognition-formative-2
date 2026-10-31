@@ -4,12 +4,14 @@ Formative 2: human activity recognition from smartphone accelerometer and gyrosc
 
 **Use case:** a phone or wearable monitor for older adults living alone. It infers the wearer's activity (standing, walking, jumping, still) and alerts a caregiver on long inactivity (*still*), or on sudden, violent, high-energy movement (proxied by *jumping*) that could be a fall or a seizure.
 
-## Group members and devices
+## Author and devices
 
-| Member | Phone | App | Configured rate | Detected rate (timestamps) | Harmonised to |
+Individual assignment by **Eddy Irasetsa**. A friend (not a group member) shared recordings from their own phone, used only as extra unseen test data.
+
+| Person | Phone | App | Configured rate | Detected rate (timestamps) | Harmonised to |
 |---|---|---|---|---|---|
-| [TODO: member name] | iPhone XS (iOS 18.7.5) | Sensor Logger 1.68 | 50 Hz (`sampleRateMs = 20`) | 49.76–49.77 Hz | 50 Hz (linear interpolation) |
-| [TODO: friend's name] (unseen test data only) | Samsung SM-A235F (Android) | Sensor Logger 1.68 | 100 Hz (`sampleRateMs = 10`) | 102.07 Hz | 50 Hz (20 Hz anti-aliasing low-pass, then linear interpolation) |
+| Eddy Irasetsa (all training data and test sequences) | iPhone XS (iOS 18.7.5) | Sensor Logger 1.68 | 50 Hz (`sampleRateMs = 20`) | 49.76–49.77 Hz | 50 Hz (linear interpolation) |
+| A friend, not a group member (unseen test data only) | Samsung SM-A235F (Android) | Sensor Logger 1.68 | 100 Hz (`sampleRateMs = 10`) | 102.07 Hz | 50 Hz (20 Hz anti-aliasing low-pass, then linear interpolation) |
 
 ## Data collection videos (one per activity)
 
@@ -22,7 +24,7 @@ Formative 2: human activity recognition from smartphone accelerometer and gyrosc
 
 ## Results (unseen test data)
 
-Unseen data comes from two sources: (a) 3 new multi-activity sequences recorded on the training phone in a later session, and (b) 4 single-activity files from a second person on a different phone (Samsung, 100 Hz).
+Unseen data comes from two sources: (a) 3 new multi-activity sequences recorded on the training phone in a later session, and (b) 4 single-activity files shared by a friend (not a group member) from a different phone (Samsung, 100 Hz).
 
 | State (Activity) | Number of Samples (windows) | Sensitivity | Specificity | Overall Accuracy |
 |---|---|---|---|---|
