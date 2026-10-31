@@ -2,7 +2,7 @@
   "devices": [
     {
       "device": "iPhone XS",
-      "files": 48,
+      "files": 52,
       "configured_hz": 50.0,
       "detected_hz_mean": 49.77,
       "detected_hz_min": 49.76,
@@ -16,41 +16,41 @@
   "train_summary": [
     {
       "label": "standing",
-      "files": 12,
-      "raw_seconds": 165.6,
-      "clean_seconds": 117.8,
+      "files": 13,
+      "raw_seconds": 179.1,
+      "clean_seconds": 127.3,
       "mean_clean_s": 9.8
     },
     {
       "label": "walking",
-      "files": 12,
-      "raw_seconds": 163.7,
-      "clean_seconds": 115.9,
+      "files": 13,
+      "raw_seconds": 177.7,
+      "clean_seconds": 125.9,
       "mean_clean_s": 9.7
     },
     {
       "label": "jumping",
-      "files": 12,
-      "raw_seconds": 163.4,
-      "clean_seconds": 115.6,
+      "files": 13,
+      "raw_seconds": 176.9,
+      "clean_seconds": 125.1,
       "mean_clean_s": 9.6
     },
     {
       "label": "still",
-      "files": 12,
-      "raw_seconds": 162.2,
-      "clean_seconds": 114.4,
+      "files": 13,
+      "raw_seconds": 175.5,
+      "clean_seconds": 123.7,
       "mean_clean_s": 9.5
     },
     {
       "label": "TOTAL",
-      "files": 48,
-      "raw_seconds": 654.8999999999999,
-      "clean_seconds": 463.69999999999993,
+      "files": 52,
+      "raw_seconds": 709.1999999999999,
+      "clean_seconds": 501.99999999999994,
       "mean_clean_s": 9.7
     }
   ],
-  "n_train_files": 48,
+  "n_train_files": 52,
   "clean_duration_range": [
     8.66,
     12.54
@@ -79,23 +79,23 @@
     ]
   },
   "train_windows": {
-    "standing": 100,
-    "walking": 98,
-    "jumping": 98,
-    "still": 96
+    "standing": 108,
+    "walking": 107,
+    "jumping": 106,
+    "still": 104
   },
   "fisher_top": {
-    "acc_sma": 84.22,
-    "acc_rms": 77.3,
-    "acc_std_x": 53.15,
-    "acc_spec_energy": 51.96,
-    "gyro_std_z": 50.37
+    "acc_sma": 87.97,
+    "acc_rms": 80.95,
+    "acc_spec_energy": 54.09,
+    "acc_std_x": 52.9,
+    "gyro_std_z": 48.47
   },
   "bw": {
     "iterations": 6,
     "converged": true,
-    "ll_init": 639.71,
-    "ll_final": 786.9,
+    "ll_init": 675.11,
+    "ll_final": 826.43,
     "tol": 0.0001,
     "max_iter": 200,
     "var_floor": 0.01
@@ -108,61 +108,61 @@
   },
   "A": {
     "standing": {
-      "standing": 0.874,
-      "walking": 0.054,
-      "jumping": 0.01,
-      "still": 0.046
+      "standing": 0.881,
+      "walking": 0.058,
+      "jumping": 0.0,
+      "still": 0.053
     },
     "walking": {
-      "standing": 0.049,
-      "walking": 0.925,
-      "jumping": 0.031,
+      "standing": 0.046,
+      "walking": 0.913,
+      "jumping": 0.048,
       "still": 0.011
     },
     "jumping": {
-      "standing": 0.039,
-      "walking": 0.011,
-      "jumping": 0.887,
-      "still": 0.057
+      "standing": 0.037,
+      "walking": 0.01,
+      "jumping": 0.886,
+      "still": 0.053
     },
     "still": {
-      "standing": 0.039,
-      "walking": 0.011,
-      "jumping": 0.072,
-      "still": 0.885
+      "standing": 0.037,
+      "walking": 0.019,
+      "jumping": 0.067,
+      "still": 0.884
     }
   },
   "A_init": {
     "standing": {
-      "standing": 0.864,
-      "walking": 0.062,
-      "jumping": 0.02,
-      "still": 0.031
+      "standing": 0.873,
+      "walking": 0.057,
+      "jumping": 0.018,
+      "still": 0.038
     },
     "walking": {
-      "standing": 0.049,
-      "walking": 0.906,
-      "jumping": 0.04,
-      "still": 0.021
+      "standing": 0.045,
+      "walking": 0.905,
+      "jumping": 0.046,
+      "still": 0.019
     },
     "jumping": {
-      "standing": 0.058,
+      "standing": 0.055,
       "walking": 0.01,
-      "jumping": 0.861,
-      "still": 0.062
+      "jumping": 0.862,
+      "still": 0.058
     },
     "still": {
-      "standing": 0.029,
-      "walking": 0.021,
-      "jumping": 0.079,
+      "standing": 0.027,
+      "walking": 0.029,
+      "jumping": 0.073,
       "still": 0.885
     }
   },
   "pi": {
-    "standing": 0.333,
-    "walking": 0.333,
-    "jumping": 0.167,
-    "still": 0.167
+    "standing": 0.308,
+    "walking": 0.308,
+    "jumping": 0.231,
+    "still": 0.154
   },
   "test_files": [
     {
@@ -228,16 +228,16 @@
         {
           "State (Activity)": "standing",
           "Number of Samples": 18,
-          "Sensitivity": 0.8889,
+          "Sensitivity": 0.8333,
           "Specificity": 0.9143,
-          "Overall Accuracy": 0.9091
+          "Overall Accuracy": 0.8977
         },
         {
           "State (Activity)": "walking",
           "Number of Samples": 29,
           "Sensitivity": 1.0,
-          "Specificity": 0.9322,
-          "Overall Accuracy": 0.9545
+          "Specificity": 0.9153,
+          "Overall Accuracy": 0.9432
         },
         {
           "State (Activity)": "jumping",
@@ -256,15 +256,15 @@
         {
           "State (Activity)": "All (multi-class)",
           "Number of Samples": 88,
-          "Sensitivity": 0.8466,
-          "Specificity": 0.9616,
-          "Overall Accuracy": 0.8864
+          "Sensitivity": 0.8327,
+          "Specificity": 0.9574,
+          "Overall Accuracy": 0.875
         }
       ],
       "cm": [
         [
-          16,
-          2,
+          15,
+          3,
           0,
           0
         ],
@@ -358,16 +358,16 @@
     {
       "State (Activity)": "standing",
       "Number of Samples": 23,
-      "Sensitivity": 0.913,
+      "Sensitivity": 0.8696,
       "Specificity": 0.9294,
-      "Overall Accuracy": 0.9259
+      "Overall Accuracy": 0.9167
     },
     {
       "State (Activity)": "walking",
       "Number of Samples": 34,
       "Sensitivity": 1.0,
-      "Specificity": 0.9459,
-      "Overall Accuracy": 0.963
+      "Specificity": 0.9324,
+      "Overall Accuracy": 0.9537
     },
     {
       "State (Activity)": "jumping",
@@ -386,52 +386,52 @@
     {
       "State (Activity)": "All (multi-class)",
       "Number of Samples": 108,
-      "Sensitivity": 0.8837,
-      "Specificity": 0.9688,
-      "Overall Accuracy": 0.9074
+      "Sensitivity": 0.8728,
+      "Specificity": 0.9655,
+      "Overall Accuracy": 0.8981
     }
   ],
   "train_table": [
     {
       "State (Activity)": "standing",
-      "Number of Samples": 100,
-      "Sensitivity": 0.99,
-      "Specificity": 0.9829,
-      "Overall Accuracy": 0.9847
+      "Number of Samples": 108,
+      "Sensitivity": 0.9815,
+      "Specificity": 0.9842,
+      "Overall Accuracy": 0.9835
     },
     {
       "State (Activity)": "walking",
-      "Number of Samples": 98,
+      "Number of Samples": 107,
       "Sensitivity": 1.0,
-      "Specificity": 0.9966,
-      "Overall Accuracy": 0.9974
+      "Specificity": 0.9937,
+      "Overall Accuracy": 0.9953
     },
     {
       "State (Activity)": "jumping",
-      "Number of Samples": 98,
+      "Number of Samples": 106,
       "Sensitivity": 1.0,
       "Specificity": 1.0,
       "Overall Accuracy": 1.0
     },
     {
       "State (Activity)": "still",
-      "Number of Samples": 96,
-      "Sensitivity": 0.9479,
+      "Number of Samples": 104,
+      "Sensitivity": 0.9519,
       "Specificity": 1.0,
-      "Overall Accuracy": 0.9872
+      "Overall Accuracy": 0.9882
     },
     {
       "State (Activity)": "All (multi-class)",
-      "Number of Samples": 392,
-      "Sensitivity": 0.9845,
-      "Specificity": 0.9949,
-      "Overall Accuracy": 0.9847
+      "Number of Samples": 425,
+      "Sensitivity": 0.9834,
+      "Specificity": 0.9945,
+      "Overall Accuracy": 0.9835
     }
   ],
   "cm_test": [
     [
-      21,
-      2,
+      20,
+      3,
       0,
       0
     ],
@@ -456,28 +456,28 @@
   ],
   "cm_train": [
     [
-      99,
-      1,
+      106,
+      2,
       0,
       0
     ],
     [
       0,
-      98,
+      107,
       0,
       0
     ],
     [
       0,
       0,
-      98,
+      106,
       0
     ],
     [
       5,
       0,
       0,
-      91
+      99
     ]
   ],
   "test_excluded_transition_windows": 8,
@@ -488,12 +488,12 @@
     "Walking16": 1.0,
     "standing_walking_jumping_still_01": 0.9189,
     "standing_walking_jumping_still_02": 0.8261,
-    "still_jumping_walking_standing_01": 0.8929
+    "still_jumping_walking_standing_01": 0.8571
   },
   "errors": {
-    "n": 10,
-    "n_seq": 10,
-    "near_boundary": 9,
+    "n": 11,
+    "n_seq": 11,
+    "near_boundary": 10,
     "n_second_phone": 0,
     "pairs": [
       {
@@ -504,7 +504,7 @@
       {
         "label": "standing",
         "pred": "walking",
-        "n": 2
+        "n": 3
       },
       {
         "label": "still",
@@ -516,24 +516,24 @@
   "domain_shift": {
     "train (iPhone XS)|acc_rms": {
       "standing": -0.75,
-      "walking": 0.16,
+      "walking": 0.15,
       "jumping": 1.19,
-      "still": -1.23
+      "still": -1.24
     },
     "train (iPhone XS)|gyro_rms": {
-      "standing": -1.11,
-      "walking": -0.07,
+      "standing": -1.13,
+      "walking": -0.06,
       "jumping": 0.26,
       "still": -2.63
     },
     "train (iPhone XS)|acc_dom_freq": {
-      "standing": 2.26,
-      "walking": 2.08,
-      "jumping": 3.73,
-      "still": 6.92
+      "standing": 2.21,
+      "walking": 2.03,
+      "jumping": 3.72,
+      "still": 7.16
     },
     "train (iPhone XS)|acc_spec_entropy": {
-      "standing": 0.72,
+      "standing": 0.71,
       "walking": 0.65,
       "jumping": 0.58,
       "still": 0.84
@@ -564,14 +564,14 @@
     }
   },
   "ablation": {
-    "HMM, supervised init + Baum-Welch (final)": 0.9074,
+    "HMM, supervised init + Baum-Welch (final)": 0.8981,
     "HMM, supervised init only": 0.9352,
-    "Frame-wise Gaussian (no transitions)": 0.9074
+    "Frame-wise Gaussian (no transitions)": 0.8981
   },
   "ablation_by_source": {
     "HMM, supervised init + Baum-Welch (final)": {
-      "all unseen": 0.9074,
-      "same phone (iPhone XS), sequences": 0.8864,
+      "all unseen": 0.8981,
+      "same phone (iPhone XS), sequences": 0.875,
       "second phone (SM-A235F), single-activity": 1.0
     },
     "HMM, supervised init only": {
@@ -580,8 +580,8 @@
       "second phone (SM-A235F), single-activity": 1.0
     },
     "Frame-wise Gaussian (no transitions)": {
-      "all unseen": 0.9074,
-      "same phone (iPhone XS), sequences": 0.8864,
+      "all unseen": 0.8981,
+      "same phone (iPhone XS), sequences": 0.875,
       "second phone (SM-A235F), single-activity": 1.0
     }
   }
