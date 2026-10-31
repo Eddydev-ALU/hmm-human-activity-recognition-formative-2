@@ -59,7 +59,7 @@ data/
 notebooks/hmm_activity_recognition.ipynb   full pipeline (data → features → HMM → evaluation)
 figures/                                all plots (PNG), also shown in the notebook
 report/
-  report.docx / report.pdf              5-page report
+  report.docx / report.pdf              4-page report
 requirements.txt
 ```
 
