@@ -6,7 +6,7 @@ Formative 2: human activity recognition from smartphone accelerometer and gyrosc
 
 ## Author and devices
 
-Individual assignment by **Eddy Irasetsa**. A friend (not a group member) shared recordings from their own phone, used only as extra unseen test data.
+Individual assignment by **Eddy Irasetsa**. A friend shared recordings from their own phone, used only as extra unseen test data.
 
 | Person | Phone | App | Configured rate | Detected rate (timestamps) | Harmonised to |
 |---|---|---|---|---|---|
@@ -15,7 +15,7 @@ Individual assignment by **Eddy Irasetsa**. A friend (not a group member) shared
 
 ## Results (unseen test data)
 
-Unseen data comes from two sources: (a) 3 new multi-activity sequences recorded on the training phone in a later session, and (b) 4 single-activity files shared by a friend (not a group member) from a different phone (Samsung, 100 Hz).
+Unseen data comes from two sources: (a) 3 new multi activity sequences recorded on the training phone in a later session, and (b) 4 single activity files shared by a friend from a different phone (Samsung, 100 Hz).
 
 | State (Activity) | Number of Samples (windows) | Sensitivity | Specificity | Overall Accuracy |
 |---|---|---|---|---|
