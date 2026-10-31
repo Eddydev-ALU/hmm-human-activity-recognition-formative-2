@@ -13,15 +13,6 @@ Individual assignment by **Eddy Irasetsa**. A friend (not a group member) shared
 | Eddy Irasetsa (all training data and test sequences) | iPhone XS (iOS 18.7.5) | Sensor Logger 1.68 | 50 Hz (`sampleRateMs = 20`) | 49.76–49.77 Hz | 50 Hz (linear interpolation) |
 | A friend, not a group member (unseen test data only) | Samsung SM-A235F (Android) | Sensor Logger 1.68 | 100 Hz (`sampleRateMs = 10`) | 102.07 Hz | 50 Hz (20 Hz anti-aliasing low-pass, then linear interpolation) |
 
-## Data collection videos (one per activity)
-
-| Activity | Video |
-|---|---|
-| Standing | https://drive.google.com/file/d/1f4_p_-ujCiJZu97DpZ5USixrpc7iwrEp/view?usp=sharing |
-| Walking | https://drive.google.com/file/d/1jgML2SbKMkt49ShfATg1yWFIp1IBQ9B9/view?usp=sharing |
-| Jumping | https://drive.google.com/file/d/1U_uXRKpqcJjFT1HDZSg_uy9OPgarakPx/view?usp=sharing |
-| Still | https://drive.google.com/file/d/1k5gLUf_np0WNJqVYsKyLhyXlgU_nX-zk/view?usp=sharing |
-
 ## Results (unseen test data)
 
 Unseen data comes from two sources: (a) 3 new multi-activity sequences recorded on the training phone in a later session, and (b) 4 single-activity files shared by a friend (not a group member) from a different phone (Samsung, 100 Hz).
